@@ -8,9 +8,17 @@ void start_program() {
 	cout << "Вопрос: Какое из простых чисел меньше одного миллиона можно записать в виде суммы наибольшего значения последовательных простых чисел?" << endl;
 	cout << "Какое количество случайных чисел сгенерировать?\n::";
 	cin >> m_i;
+	if (m_i < 2) {
+		cout << "Введено слишком маленькое количество" << endl;
+		return;
+	}
 	cin.clear(); cin.ignore(cin.rdbuf()->in_avail()); _flushall();
 	cout << "Какое число не должна превышать сумма простых чисел?\n::";
 	cin >> limit;
+	if (limit < 2) {
+		cout << "Введено слишком маленькое количество" << endl;
+		return;
+	}
 	cin.clear(); cin.ignore(cin.rdbuf()->in_avail()); _flushall();
 	cout << "Нажмите Enter для старта." << endl;
 	cin.get();
@@ -23,7 +31,7 @@ void loading(int *Loading, int *l){
 		if (*l % (limit / 100) == 0) {
 			system("cls");
 			*Loading = *Loading + 1;
-			cout << "Загрузка... " << *Loading << "%" << endl;;
+			cout << "Загрузка... " << *Loading << "%" << endl;
 		}
 	}
 }
