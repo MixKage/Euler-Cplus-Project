@@ -30,7 +30,6 @@ void loading(int *Loading, int *l){
 
 int work() {
 	system("cls");
-	cout << "Запуск генерации чисел..." << endl;
 	unsigned int start_time = clock();
 	int* array = new int[m_i];
 	int Vrem = 0;
@@ -39,6 +38,8 @@ int work() {
 	int Loading = 0;
 	int amount_of_numbers = 0;
 	array[0] = 1;
+	cout << "Инициализация переменных завершена..." << endl;
+	cout << "Запуск генерации чисел..." << endl;
 	for (int l = 2; l < limit; l++) {
 		for (int i = 2; i < l; i++) {
 			if (l % i != 0) {
@@ -59,6 +60,9 @@ int work() {
 			TF = false;
 		}
 		loading(&Loading, &l);
+		if (l == 1000000) {
+			cout << "Скоро начнётся загрузка..." << endl;
+		}
 	}
 
 	system("cls");
