@@ -1,7 +1,8 @@
 //Find the sum of all the primes below two million.
-#include<iostream>
+#include <iostream>
 #include <list>
 #include <cmath>
+#include <ctime>
 using namespace std;
 
 void Loading(const int* iterator)
