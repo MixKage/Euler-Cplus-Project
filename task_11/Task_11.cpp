@@ -41,14 +41,14 @@ bool check_num(int i, int mode)
 		if (a % 20 < 2)
 			return false;
 	}
-	else if (mode == 6)
-	{
-		a = i; b = i + 21; c = i + 42; d = i + 63;
-		if ((a > 399) || (b > 399) || (c > 399) || (d > 399))
-			return false;
-		if (a % 20 > 17)
-			return false;
-	}
+	// else if (mode == 6)
+	// {
+	// 	a = i; b = i + 21; c = i + 42; d = i + 63;
+	// 	if ((a > 399) || (b > 399) || (c > 399) || (d > 399))
+	// 		return false;
+	// 	if (a % 20 > 17)
+	// 		return false;
+	// }
 	else if (mode == 7)
 	{
 		a = i; b = i - 19; c = i - 38; d = i - 57;
@@ -57,14 +57,14 @@ bool check_num(int i, int mode)
 		if (a % 20 > 17)
 			return false;
 	}
-	else if (mode == 8)
-	{
-		a = i; b = i + 19; c = i + 38; d = i + 57;
-		if ((a > 399) || (b > 399) || (c > 399) || (d > 399))
-			return false;
-		if (a % 20 < 2)
-			return false;
-	}
+	// else if (mode == 8)
+	// {
+	// 	a = i; b = i + 19; c = i + 38; d = i + 57;
+	// 	if ((a > 399) || (b > 399) || (c > 399) || (d > 399))
+	// 		return false;
+	// 	if (a % 20 < 2)
+	// 		return false;
+	// }
 	return true;
 }
 
@@ -137,18 +137,18 @@ void sum_diagonal_1(int i)
 	comparison(temp);
 }
 
-void sum_diagonal_2(int i)
-{
-	unsigned long long temp = 1;
-	bool TF = check_num(i, 6);
-	if (!TF)
-		return;
-	for (int k = 0; k < 4; k++)
-	{
-		temp *= _array[i]; i += 21;
-	}
-	comparison(temp);
-}
+// void sum_diagonal_2(int i)
+// {
+// 	unsigned long long temp = 1;
+// 	bool TF = check_num(i, 6);
+// 	if (!TF)
+// 		return;
+// 	for (int k = 0; k < 4; k++)
+// 	{
+// 		temp *= _array[i]; i += 21;
+// 	}
+// 	comparison(temp);
+// }
 
 void sum_diagonal_3(int i)
 {
@@ -163,17 +163,17 @@ void sum_diagonal_3(int i)
 	comparison(temp);
 }
 
-void sum_diagonal_4(int i)
-{
-	unsigned long long temp = 1;
-	bool TF = check_num(i, 8);
-	if (!TF)
-		return;
-	for (int k = 0; k < 4; k++)
-	{
-		temp *= _array[i]; i += 19;
-	}comparison(temp);
-}
+// void sum_diagonal_4(int i)
+// {
+// 	unsigned long long temp = 1;
+// 	bool TF = check_num(i, 8);
+// 	if (!TF)
+// 		return;
+// 	for (int k = 0; k < 4; k++)
+// 	{
+// 		temp *= _array[i]; i += 19;
+// 	}comparison(temp);
+// }
 
 void triger(int iterator)
 {
@@ -182,9 +182,9 @@ void triger(int iterator)
 	sum_up(iterator);
 	sum_down(iterator);
 	sum_diagonal_1(iterator);
-	sum_diagonal_2(iterator);
+	//sum_diagonal_2(iterator);
 	sum_diagonal_3(iterator);
-	sum_diagonal_4(iterator);
+	//sum_diagonal_4(iterator);
 }
 
 int main()
