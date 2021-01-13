@@ -1,4 +1,4 @@
-﻿//How many such routes are there through a 20×20 grid?
+﻿//How many such routes are there through a 20x20 grid?
 #include <iostream>
 #include <ctime>
 using namespace std;
@@ -11,7 +11,7 @@ void spend_time(unsigned int* start_time) {
 
 void start_program(unsigned long* limit) {
 	system("cls");
-	cout << "Task_15: How many such routes are there through a 20×20 grid?\nEnter the gridSize:\n::";
+	cout << "Task_15: How many such routes are there through a 20x20 grid?\nEnter the gridSize:\n::";
 	while (true) {
 		cin >> *limit;
 		if (!cin) {
